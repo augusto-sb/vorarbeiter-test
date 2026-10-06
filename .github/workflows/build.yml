@@ -625,6 +625,7 @@ jobs:
           docker run --rm \
             --security-opt seccomp=${GITHUB_WORKSPACE}/flatpak.seccomp.json \
             --security-opt apparmor=unconfined \
+            -- dns 8.8.8.8 \
             --cap-drop all \
             --entrypoint="" \
             -e TMPDIR=/work/tmp \
